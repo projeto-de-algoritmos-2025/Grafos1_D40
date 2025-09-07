@@ -18,7 +18,7 @@
 | Matrícula   | Aluno                             |
 | ----------- | ---------------------------------- |
 | 20/2045141  | João Paulo Monteiro de Barros Ceva Rodrigues|
-|   | Yan Guimarães |
+| 22/2006220  | Yan Guimarães |
 </div>
 
 ## Sobre 

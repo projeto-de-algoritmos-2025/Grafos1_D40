@@ -27,121 +27,6 @@ function load_graph(filename)
     
     return graph, abbr_to_id
 end
-#=
-function create_graph_visualization(data, output_file = "course_dag.png")
-    # Create a Graphs.jl SimpleDiGraph
-    n_nodes = length(data["nodes"])
-    g = SimpleDiGraph(n_nodes)
-    
-    # Create mapping from node ID to index
-    id_to_index = Dict{String, Int}()
-    index_to_id = Dict{Int, String}()
-    index_to_abbr = Dict{Int, String}()
-    index_to_label = Dict{Int, String}()
-    
-    for (i, node) in enumerate(data["nodes"])
-        id_to_index[node["id"]] = i
-        index_to_id[i] = node["id"]
-        index_to_abbr[i] = node["abbr"]
-        index_to_label[i] = node["label"]
-    end
-    
-    # Add edges to the graph
-    for edge in data["edges"]
-        from_idx = id_to_index[edge["from"]]
-        to_idx = id_to_index[edge["to"]]
-        add_edge!(g, from_idx, to_idx)
-    end
-    
-    # Calculate node levels for better layout
-    levels = zeros(Int, n_nodes)
-    visited = falses(n_nodes)
-    
-    function calculate_levels()
-        # Find nodes with no incoming edges (root nodes)
-        in_degree = zeros(Int, n_nodes)
-        for edge in data["edges"]
-            to_idx = id_to_index[edge["to"]]
-            in_degree[to_idx] += 1
-        end
-        
-        # BFS to assign levels
-        queue = Int[]
-        for i in 1:n_nodes
-            if in_degree[i] == 0
-                push!(queue, i)
-                levels[i] = 0
-                visited[i] = true
-            end
-        end
-        
-        while !isempty(queue)
-            current = popfirst!(queue)
-            for neighbor in neighbors(g, current)
-                if !visited[neighbor]
-                    levels[neighbor] = levels[current] + 1
-                    visited[neighbor] = true
-                    push!(queue, neighbor)
-                end
-            end
-        end
-    end
-    
-    calculate_levels()
-    
-    # Create color scheme based on levels
-    max_level = maximum(levels)
-    colors = [:lightblue, :lightgreen, :lightcoral, :lightyellow, :lightpink, :lightgray, :lightsalmon, :lightcyan]
-    node_colors = [colors[mod(levels[i], length(colors)) + 1] for i in 1:n_nodes]
-    
-    # Create the plot with enhanced styling
-    p = graphplot(g, 
-        names = [index_to_abbr[i] for i in 1:n_nodes],
-        fontsize = 10,
-        fontfamily = "Arial",
-        nodesize = 0.15,
-        nodecolor = node_colors,
-        nodeborder = :black,
-        nodebordercolor = :darkblue,
-        nodeborderwidth = 2,
-        edgecolor = :darkgray,
-        edgelinewidth = 2,
-        arrow = true,
-        arrowsize = 0.3,
-        arrowcolor = :darkgray,
-        title = "Course Prerequisites DAG\n(Engineering Curriculum)",
-        titlefontsize = 16,
-        titlefontfamily = "Arial Bold",
-        size = (1600, 1000),
-        curves = true,
-        curve_radius = 0.1,
-        background_color = :white,
-        grid = false,
-        showaxis = false,
-        legend = false
-    )
-    
-    # Add level information as text annotations
-    level_counts = Dict{Int, Int}()
-    for level in levels
-        level_counts[level] = get(level_counts, level, 0) + 1
-    end
-    
-    # Add legend for levels
-    legend_text = "Course Levels:\n"
-    for level in sort(collect(keys(level_counts)))
-        color_name = colors[mod(level, length(colors)) + 1]
-        legend_text *= "Level $level: $(level_counts[level]) courses\n"
-    end
-    
-    # Save the plot
-    savefig(p, output_file)
-    println("Enhanced graph saved as $output_file")
-    println("Graph has $(n_nodes) nodes and $(ne(g)) edges")
-    println("Levels: $level_counts")
-    
-    return p
-end
 
 function create_hierarchical_visualization(data, output_file = "course_dag_hierarchical.png")
     # Create a Graphs.jl SimpleDiGraph
@@ -263,7 +148,7 @@ function create_hierarchical_visualization(data, output_file = "course_dag_hiera
     
     return p
 end
-=#
+
 function bfs(graph, start, abbr_to_id)
     visited = Set([start])
     queue = [start]
@@ -286,11 +171,8 @@ data = JSON.parsefile("Projeto/courses.json")
 graph, abbr_to_id = load_graph("Projeto/courses.json")
 
 # Generate the DAG visualizations
-println("Generating enhanced DAG visualization...")
-create_graph_visualization(data, "Projeto/course_dag_enhanced.png")
-
 println("\nGenerating hierarchical DAG visualization...")
-create_hierarchical_visualization(data, "Projeto/course_dag_hierarchical.png")
+create_hierarchical_visualization(data, "Projeto/course_dag_hierarchical2.png")
 
 # Run BFS
 println("\nBFS traversal:")

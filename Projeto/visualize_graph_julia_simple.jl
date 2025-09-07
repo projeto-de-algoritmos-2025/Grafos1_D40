@@ -111,12 +111,12 @@ function create_graph_plot(g::SimpleDiGraph, positions::Vector{Tuple{Float64, Fl
     for i in 1:nv(g)
         x, y = positions[i]
         # Aumenta markersize para 25 (era 8)
-        scatter!(plt, [x], [y], markersize = 25, color = :lightblue)
+        scatter!(plt, [x], [y], markersize = 35, color = :lightblue)
         # Aumenta fonte para 12 (era 8)
         annotate!(plt, x, y, text(index_to_abbr[i], 12))
     end
     
-    savefig(plt, "graph.png")
+    savefig(plt, "graph2.png")
 end
 
 """
@@ -124,7 +124,7 @@ Função principal que executa somente a visualização da DAG.
 """
 function main()
     # Carrega dados silenciosamente
-    data = load_graph_data("courses.json")
+    data = load_graph_data("Projeto/courses.json")
     
     # Cria grafo
     g, id_to_index, index_to_abbr = create_julia_graph(data)
