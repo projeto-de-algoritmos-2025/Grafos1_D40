@@ -1,4 +1,4 @@
-# Parking lot
+# BFS - Ordem Topológica
 
 **Número da Lista**: 1  
 **Conteúdo da Disciplina**: FGA0124 - PROJETO DE ALGORITMOS - T01  
@@ -10,61 +10,30 @@
 <div align = "center">
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/BiancaPatrocinio7"><img style="border-radius: 50%;" src="https://github.com/BiancaPatrocinio7.png" width="190;" alt=""/><br /><sub><b>Bianca Patrocínio</b></sub></a><br /><a href="Link git" title="Rocketseat"></a></td>
-    <td align="center"><a href="https://github.com/leticiatmartins"><img style="border-radius: 50%;" src="https://github.com/leticiatmartins.png" width="190px;" alt=""/><br /><sub><b>Leticia Torres </b></sub></a><br />
+    <td align="center"><a href="https://github.com/joaombc"><img style="border-radius: 50%;" src="https://github.com/joaombc.png" width="190;" alt=""/><br /><sub><b>João Paulo</b></sub></a><br /><a href="Link git" title="Rocketseat"></a></td>
+    <td align="center"><a href="https://github.com/yanzin00"><img style="border-radius: 50%;" src="https://github.com/yanzin00.png" width="190px;" alt=""/><br /><sub><b>Yan Guimarães </b></sub></a><br />
   </tr>
 </table>
 
 | Matrícula   | Aluno                             |
 | ----------- | ---------------------------------- |
-| 22/1008801  | Bianca Patrocínio Castro           |
-| 20/2016702  | Leticia Torres Soares Martins      |
+| 20/2045141  | João Paulo Monteiro de Barros Ceva Rodrigues|
+|   | Yan Guimarães |
 </div>
 
 ## Sobre 
-O sistema de estacionamento simula a alocação de vagas de estacionamento para clientes em um shopping, com 18 vagas e 6 lojas, utilizando algoritmos de grafos. O objetivo é encontrar a vaga mais próxima de uma loja específica usando a busca em largura (BFS).
+O programa percorre uma DAG e utiliza BFS para listar todas as ordenações topológicas do ciclo do curso de Algoritmos e Programação.
 
 ## Screenshots
 <p align="center">
   <img src="Documentos/screenshots/Print%201.png" alt="Print 1 do projeto" width="600"/>
 </p>
 
-<p align="center">
-  <img src="Documentos/screenshots/Print%202.png" alt="Print 2 do projeto" width="600"/>
-</p>
-
-<p align="center">
-  <img src="Documentos/screenshots/Print%203.png" alt="Print 3 do projeto" width="600"/>
-</p>
-
-<p align="center">
-  <img src="Documentos/screenshots/Print.png" alt="Print do projeto" width="600"/>
-</p>
-
-<p align="center">
-  <img src="Documentos/screenshots/Print%204.png" alt="Print 4 do projeto" width="600"/>
-</p>
-
-<p align="center">
-  <img src="Documentos/screenshots/Print%205.png" alt="Print 5 do projeto" width="600"/>
-</p>
-
-<p align="center">
-  <img src="Documentos/screenshots/Print%206.png" alt="Print 6 do projeto" width="600"/>
-</p>
-
-<p align="center">
-  <img src="Documentos/screenshots/Print%207.png" alt="Print 7 do projeto" width="600"/>
-</p>
-
-<p align="center">
-  <img src="Documentos/screenshots/Print%208.png" alt="Print 8 do projeto" width="600"/>
-</p>
 
 
 
 ## Instalação 
-**Linguagem**: C++
+**Linguagem**: Julia
 
 ## Pré-requisitos
 
