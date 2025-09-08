@@ -22,7 +22,7 @@
 </div>
 
 ## Sobre 
-O programa percorre uma DAG e utiliza BFS para listar todas as ordenações topológicas do ciclo do curso de Algoritmos e Programação.
+O programa percorre uma DAG e utiliza BFS para listar todas as ordenações topológicas do ciclo do curso de Algoritmos e Programação e também gerar uma imagem da DAG.
 
 ## Screenshots
 <p align="center">
@@ -32,79 +32,54 @@ O programa percorre uma DAG e utiliza BFS para listar todas as ordenações topo
 
 
 
-## Instalação 
-**Linguagem**: Julia
+### Instalando o Julia
 
-## Pré-requisitos
+### Opção 1: Site Oficial do Julia (Recomendado)
 
-Antes de rodar o projeto, você precisará ter os seguintes programas instalados:
+1. **Visite o site do Julia**: Acesse [https://julialang.org/downloads/](https://julialang.org/downloads/)
 
-- **g++** (compilador C++).
-- **make** (ferramenta de automação de builds).
-- **Graphviz (dot)** para gerar e visualizar os grafos do caminho.
+2. **Baixe o Julia**: 
+   - Escolha a versão estável mais recente (1.10.x ou mais nova)
+   - Selecione o instalador apropriado para seu sistema operacional:
+     - **Windows**: Baixe o instalador `.exe`
+     - **macOS**: Baixe o arquivo `.dmg`
+     - **Linux**: Baixe o arquivo `.tar.gz` apropriado
 
-### Instalar g++, make e dot
+3. **Instale o Julia**:
+   - **Windows**: Execute o arquivo `.exe` e siga o assistente de instalação
+   - **macOS**: Abra o arquivo `.dmg` e arraste o Julia para a pasta Applications
+   - **Linux**: Extraia o arquivo `.tar.gz` e adicione o Julia ao seu PATH
 
-#### No macOS:
-Se você usa macOS, pode instalar com o Homebrew:
+4. **Verifique a Instalação**:
+   ```bash
+   julia --version
+   ```
+   Você deve ver uma saída como: `julia version 1.10.x`
 
+
+## Configurando o Projeto
+
+### 1. Clone ou Baixe o Projeto
 ```bash
-brew install gcc make graphviz
+git clone https://github.com/projeto-de-algoritmos-2025/Grafos1_D40.git
+
+cd Grafos1_D40
 ```
 
-#### No Linux (Ubuntu/Debian):
-No Linux, instale com:
-
+### 2. Inicialize o Projeto Julia
 ```bash
-sudo apt update
-sudo apt install build-essential graphviz
+# Navegue até o diretório do projeto
+cd /caminho/para/Grafos1_D40/Projeto
+
+# Rodar o arquivo Julia
+julia run {{nome_do_arquivo}}
 ```
-
-## Como compilar e executar o projeto
-### Passo 1: Clonar o repositório
-```bash
-git clone https://github.com/seu-usuario/Grafos-1-Parking-lot.git
-cd Grafos-1-Parking-lot
-```
-
-### Passo 2: Compilar o projeto
-Para compilar o projeto, use o comando make. Isso irá compilar todos os arquivos fonte e gerar o executável:
-
-```bash
-make
-```
-
-### Passo 3: Rodar o projeto
-Após a compilação, execute o programa gerado:
-
-```bash
-./Grafos-1-Parking-lot
-```
-
-## Uso 
-Após rodar o programa, escolha uma loja. O sistema encontrará a vaga mais próxima disponível usando o algoritmo BFS, e um grafo será gerado mostrando o caminho até essa vaga.
-
-O grafo será salvo como uma imagem `.png` no formato:
-
-```
-caminho_para_vaga_X.png
-```
-
-(onde `X` é o número da vaga).
 
 ## Apresentação 
 
 <div align="center">
-<a href="https://youtu.be/PoJ3FK-J3wM?si=VLjQ5nK-w6U8Dh7-"><img src="https://i.imgur.com/nNBEJk2.png" width="50%"></a>
+<a href=""><img src="https://i.imgur.com/nNBEJk2.png" width="50%"></a>
 </div>
 
-<font size="3"><p style="text-align: center">Autor: [Bianca Patrocínio](https://github.com/BiancaPatrocinio7) e [Letícia Torres](https://github.com/leticiatmartins).</p></font>
-
-
-## Outros 
-- O projeto usa a biblioteca Graphviz para gerar arquivos `.dot` e convertê-los em imagens PNG.
-- Se tiver problemas para visualizar as imagens, verifique se o `dot` está instalado corretamente.
-  
-
-
+<font size="3"><p style="text-align: center">Autor: [João Paulo](https://github.com/joaombc) e [yan Guimarães](https://github.com/yanzin00).</p></font>
 
