@@ -116,7 +116,7 @@ function create_graph_plot(g::SimpleDiGraph, positions::Vector{Tuple{Float64, Fl
         annotate!(plt, x, y, text(index_to_abbr[i], 12))
     end
     
-    savefig(plt, "graph2.png")
+    savefig(plt, "/Projeto/graph/graph2.png")
 end
 
 """

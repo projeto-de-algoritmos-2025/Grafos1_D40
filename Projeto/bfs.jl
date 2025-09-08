@@ -117,7 +117,7 @@ function create_hierarchical_visualization(data, output_file = "course_dag_hiera
         names = [index_to_abbr[i] for i in 1:n_nodes],
         fontsize = 9,
         fontfamily = "Arial",
-        nodesize = 0.2,
+        nodesize = 0.3,
         nodecolor = node_colors,
         nodeborder = :black,
         nodebordercolor = :darkblue,
@@ -125,9 +125,9 @@ function create_hierarchical_visualization(data, output_file = "course_dag_hiera
         edgecolor = :darkgray,
         edgelinewidth = 2,
         arrow = true,
-        arrowsize = 0.4,
+        arrowsize = 0.2,
         arrowcolor = :darkgray,
-        title = "Course Prerequisites DAG - Hierarchical Layout\n(Engineering Curriculum)",
+        title = "Pré-requisitos do curso DAG - Layout Hierárquico (Currículo de Engenharia) ",
         titlefontsize = 16,
         titlefontfamily = "Arial Bold",
         size = (1800, 1200),
@@ -172,7 +172,7 @@ graph, abbr_to_id = load_graph("Projeto/courses.json")
 
 # Generate the DAG visualizations
 println("\nGenerating hierarchical DAG visualization...")
-create_hierarchical_visualization(data, "Projeto/course_dag_hierarchical2.png")
+create_hierarchical_visualization(data, "Projeto/graph/course_dag_hierarchical2.png")
 
 # Run BFS
 println("\nBFS traversal:")
