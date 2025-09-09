@@ -78,7 +78,7 @@ julia run {{nome_do_arquivo}}
 ## Apresentação 
 
 <div align="center">
-<a href=""><img src="https://i.imgur.com/nNBEJk2.png" width="50%"></a>
+<a href="https://youtu.be/VmqM0kqmLx8"><img src="https://img.youtube.com/vi/VmqM0kqmLx8/maxresdefault.jpg" width="50%"></a>
 </div>
 
 <font size="3"><p style="text-align: center">Autor: [João Paulo](https://github.com/joaombc) e [yan Guimarães](https://github.com/yanzin00).</p></font>
