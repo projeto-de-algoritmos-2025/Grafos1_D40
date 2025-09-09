@@ -21,12 +21,20 @@
 | 22/2006220  | Yan Guimarães |
 </div>
 
-## Sobre 
-O programa percorre uma DAG e utiliza BFS para listar todas as ordenações topológicas do ciclo do curso de Algoritmos e Programação e também gerar uma imagem da DAG.
+## Sobre
 
-## Screenshots
+Este projeto utiliza algoritmos de grafos para analisar e visualizar o fluxograma de Engenharia de Software. A partir de um arquivo JSON com as disciplinas e seus pré-requisitos, o programa constrói um grafo direcionado acíclico (DAG) e realiza diversas operações:
+
+- **Visualização**: Gera fluxogramas hierárquicos do currículo, destacando os níveis e dependências entre disciplinas.
+- **Percurso e Análise**: Utiliza algoritmos BFS e DFS para percorrer o grafo, identificar fontes, sumidouros e verificar se o grafo é um DAG.
+- **Ordenações Topológicas**: Lista todas as possíveis ordens topológicas das disciplinas, mostrando diferentes formas válidas de cursar o ciclo.
+- **Estatísticas**: Exibe informações como número de disciplinas, arestas, fontes, sumidouros e total de ordenações possíveis.
+
+O projeto facilita o entendimento da estrutura curricular, permitindo visualizar caminhos de formação e dependências entre matérias de forma clara
+
+## Grafo Acíclico Direcionado (DAG) Fluxograma APC
 <p align="center">
-  <img src="Documentos/screenshots/Print%201.png" alt="Print 1 do projeto" width="600"/>
+  <img src="Projeto/graph/course_dag_hierarchical2.png" alt="Dag fluxograma APC" width="800"/>
 </p>
 
 
